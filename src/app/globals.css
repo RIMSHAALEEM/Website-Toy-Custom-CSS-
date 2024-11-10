@@ -1,0 +1,267 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* home page */
+
+
+/* Container */
+.container {
+    padding-left: 2.5rem;
+}
+
+/* Titles */
+.title {
+    font-size: 3.75rem; /* text-6xl */
+    font-weight: bold;
+   
+}
+
+.featured-food {
+    padding-top: 0.5rem;
+}
+
+.accent {
+    color: #1e9cf1; /*  "blue" color */
+}
+
+/* Description */
+.description {
+    max-width: 550px;
+    padding-top: 2.5rem;
+    color: #4a4a4a; /* text-gray-700 */
+}
+
+/* Dash (Assuming it's a separator element) */
+.dash {
+    height: 5px;
+    background-color: #1e9cf1; /* Light gray */
+    margin-bottom: 1rem;
+    width: 190px;
+    margin-top: 20px;
+}
+
+/* Grid */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 37% 1fr;
+    gap: 4rem;
+    margin-top: 2.5rem;
+}
+
+/* Card Styles */
+.card {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.card-first,
+.card-third {
+    align-self: flex-end;
+}
+
+.card-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 1.5rem;
+}
+
+.card-content {
+    padding-top: 1rem;
+    /* space-y: 1rem; */
+}
+
+.card-title {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 500;
+}
+
+.card-text {
+    color: #4a4a4a;
+    font-size: 0.875rem; /* text-[14px] */
+}
+
+.card-text {
+    font-size: 1rem; /* xl:text-[16px] */
+}
+/* Media Query for Tablets and Mobile Devices */
+@media (max-width: 1024px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr); /* Two cards per row on tablets */
+    }
+  
+    .title {
+      font-size: 1.8rem;
+    }
+  
+    .featured-food {
+      font-size: 1.8rem;
+    }
+  
+    .description {
+      font-size: 1rem;
+      padding: 0 20px;
+      
+    }
+  
+    .card-img {
+      height: 180px;
+    }
+  
+    .card-content {
+      padding: 15px;
+    }
+  
+    .card-text {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: 1fr; /* One card per row on mobile */
+    }
+  
+    .title {
+      font-size: 1.5rem;
+    }
+  
+    .featured-food {
+      font-size: 1.5rem;
+    }
+  
+    .description {
+      font-size: 0.9rem;
+      padding: 0 10px;
+    }
+  
+    .card-img {
+      height: 160px;
+    }
+  
+    .card-content {
+      padding: 10px;
+    }
+  
+    .card-text {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Further customization for extra small devices (portrait mobile screens) */
+  @media (max-width: 480px) {
+    .title {
+      font-size: 1.3rem;
+    }
+  
+    .featured-food {
+      font-size: 1.3rem;
+    }
+  
+    .description {
+      font-size: 0.85rem;
+      padding: 0 10px;
+    }
+  
+    .card-img {
+      height: 140px;
+    }
+  
+    .card-content {
+      padding: 8px;
+    }
+  
+    .card-text {
+      font-size: 0.85rem;
+    }
+  }
+
+
+
+  
+
+/* ABOUT US */
+/* Base styles for the container */
+.container-about {
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+/* Grid layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;  /* Default layout for small screens */
+  gap: 20px;
+}
+
+/* Image container styling */
+.image-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;  /* Centering the image */
+}
+
+/* Survey image styling */
+.survey-image {
+  width: 100%;
+  height: auto;
+  border-radius: 30px;
+  margin-left: 90px;
+  margin-top: 50px;
+  object-fit: cover;  /* Ensure the image is cropped appropriately */
+}
+
+/* Content container styling */
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 60px;
+}
+
+/* Title and subtitle styles */
+.title, .subtitle {
+  font-size: 32px;  /* Default font size for small screens */
+  font-weight: bold;
+}
+
+/* Highlighted text in the subtitle */
+.subtitle .highlight {
+  color: #1e9cf1;  /* blue color */
+}
+
+/* Description styling */
+.description {
+  color: #4b4b4b;
+  padding-top: 16px;
+  line-height: 1.6;
+}
+
+/* Responsive breakpoints */
+
+/* Medium screens (tablets and above) */
+@media (min-width: 768px) {
+  .grid-container {
+      grid-template-columns: 50% 1fr;  /* Two-column layout */
+  }
+
+  .survey-image {
+      width: auto;
+      height: 90vh;  /* Make image taller on large screens */
+  }
+
+  .title, .subtitle {
+      font-size: 48px;  /* Larger font size for tablets and above */
+  }
+}
+
+/* Large screens (desktops) */
+@media (min-width: 1024px) {
+  .title, .subtitle {
+      font-size: 56px;  /* Even larger font size for desktops */
+  }
+}
